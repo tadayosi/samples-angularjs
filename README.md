@@ -1,2 +1,3 @@
-# samples-patternfly
-PatternFly samples
+# PatternFly Samples
+
+See: https://tadayosi.github.io/samples-patternfly/

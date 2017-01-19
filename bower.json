@@ -19,6 +19,7 @@
     "tests"
   ],
   "dependencies": {
-    "patternfly": "^3.18.1"
+    "patternfly": "^3.18.1",
+    "patternfly-bootstrap-treeview": "^2.1.1"
   }
 }
