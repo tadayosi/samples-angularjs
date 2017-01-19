@@ -1,0 +1,24 @@
+{
+  "name": "samples-patternfly",
+  "homepage": "https://github.com/tadayosi/samples-patternfly",
+  "authors": [
+    "Tadayoshi Sato <sato.tadayoshi@gmail.com>"
+  ],
+  "description": "PatternFly samples",
+  "main": "index.html",
+  "keywords": [
+    "patternfly"
+  ],
+  "license": "ASL-2.0",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "patternfly": "^3.18.1"
+  }
+}
