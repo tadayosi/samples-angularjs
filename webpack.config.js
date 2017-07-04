@@ -1,8 +1,9 @@
 const path = require('path');
+
 module.exports = {
-  entry: './app/index.js',
+  entry: './app/main.js',
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
@@ -17,7 +18,7 @@ module.exports = {
       ],
       loader: 'babel-loader',
       query: {
-        presets: ['es2015']
+        presets: ['env']
       }
     }]
   },

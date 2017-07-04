@@ -6,120 +6,78 @@
   <meta charset="utf-8" />
   <base href="/" />
 
-  <link href="bower_components/patternfly/dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
-  <link href="bower_components/patternfly/dist/css/patternfly-additions.min.css" rel="stylesheet" media="screen, print">
+  <link href="node_modules/patternfly/dist/css/patternfly.min.css" rel="stylesheet" media="screen, print">
+  <link href="node_modules/patternfly/dist/css/patternfly-additions.min.css" rel="stylesheet" media="screen, print">
 
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="bower_components/patternfly/dist/js/patternfly.min.js"></script>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/patternfly/dist/js/patternfly.min.js"></script>
 
-  <script src="bower_components/c3/c3.min.js"></script>
-  <script src="bower_components/d3/d3.min.js"></script>
-  <script src="bower_components/matchHeight/jquery.matchHeight-min.js"></script>
+  <script src="node_modules/c3/c3.min.js"></script>
+  <script src="node_modules/d3/d3.min.js"></script>
+  <script src="node_modules/matchHeight/jquery.matchHeight-min.js"></script>
 
-  <script src="bower_components/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+  <script src="node_modules/patternfly-bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="node_modules/angular/angular.js"></script>
 </head>
 
-<body class="cards-pf">
+<body>
 
   <nav class="navbar navbar-pf-vertical">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
       <a href="index.html" class="navbar-brand">
-          <img class="navbar-brand-icon" src="assets/logo-pf.svg" alt="PF"/>
-          PatternFly Samples
-        </a>
+        <img class="navbar-brand-icon" src="assets/logo-pf.svg" alt="PF"/>
+        AngularJS 1.x Samples
+      </a>
     </div>
   </nav>
+
   <div class="nav-pf-vertical nav-pf-vertical-with-sub-menus">
     <ul class="list-group">
       <li class="list-group-item">
-        <a>
-            <span class="fa fa-dashboard" data-toggle="tooltip" title="Dashboard"></span>
-            <span class="list-group-item-value">Dashboard</span>
-          </a>
+        <a href="/">
+          <span class="fa fa-cube" data-toggle="tooltip" title="Dashboard"></span>
+          <span class="list-group-item-value">Sample 1</span>
+        </a>
       </li>
       <li class="list-group-item">
-        <a>
-            <span class="fa fa-shield" data-toggle="tooltip" title="Dolor"></span>
-            <span class="list-group-item-value">Dolor</span>
-          </a>
+        <a href="/">
+          <span class="fa fa-cube" data-toggle="tooltip" title="Dashboard"></span>
+          <span class="list-group-item-value">Sample 2</span>
+        </a>
+      </li>
+      <li class="list-group-item">
+        <a href="/">
+          <span class="fa fa-cube" data-toggle="tooltip" title="Dashboard"></span>
+          <span class="list-group-item-value">Sample 3</span>
+        </a>
       </li>
     </ul>
   </div>
 
   <div class="container-fluid container-pf-nav-pf-vertical">
-
-    <div class="alert alert-success">
-      <span class="pficon pficon-ok"></span> Hello! This is a collection of PatternFly samples.
-    </div>
-
-    <h2>Bootstrap Tree View</h2>
-    <div id="tree"></div>
-
-    <h2>Accordion</h2>
-    <div class="panel-group" id="accordion-markup" style="width:240px">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion-markup" href="#collapseOne">
-                Lorem ipsum
-              </a>
-          </h4>
-        </div>
-        <div id="collapseOne" class="panel-collapse collapse in">
-          <div class="panel-body">
-            Praesent sagittis est et arcu fringilla placerat. Cras erat ante, dapibus non mauris ac, volutpat sollicitudin ligula. Morbi
-            gravida nisl vel risus tempor, sit amet luctus erat tempus. Curabitur blandit sem non pretium bibendum. Donec
-            eleifend non turpis vitae vestibulum. Vestibulum ut sem ac nunc posuere blandit sed porta lorem. Cras rutrum
-            velit vel leo iaculis imperdiet.
+    <div class="row">
+      <div class="col-sm-12 col-md-12">
+        <h2>Button</h2>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <div class="col-md-10 col-md-offset-2">
+              <button type="button" class="btn btn-primary">Save</button>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion-markup" href="#collapseTwo" class="collapsed">
-                Dolor sit amet
-              </a>
-          </h4>
-        </div>
-        <div id="collapseTwo" class="panel-collapse collapse">
-          <div class="panel-body">
-            Donec consequat dignissim neque, sed suscipit quam egestas in. Fusce bibendum laoreet lectus commodo interdum. Vestibulum
-            odio ipsum, tristique et ante vel, iaculis placerat nulla. Suspendisse iaculis urna feugiat lorem semper, ut
-            iaculis risus tempus.
-          </div>
-        </div>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion-markup" href="#collapseThree" class="collapsed">
-                Consectetur
-              </a>
-          </h4>
-        </div>
-        <div id="collapseThree" class="panel-collapse collapse">
-          <div class="panel-body">
-            Curabitur nisl quam, interdum a venenatis a, consequat a ligula. Nunc nec lorem in erat rhoncus lacinia at ac orci. Sed nec
-            augue congue, vehicula justo quis, venenatis turpis. Nunc quis consectetur purus. Nam vitae viverra lacus. Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu augue felis. Maecenas in dignissim purus, quis
-            pulvinar lectus. Vivamus euismod ultrices diam, in mattis nibh.
-          </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>
 
-  <script src="app/main.js"></script>
+  <script src="dist/main.bundle.js"></script>
 </body>
 
 </html>
