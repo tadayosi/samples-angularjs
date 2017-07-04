@@ -1,3 +1,3 @@
-# PatternFly Samples
+# AngularJS Samples
 
-See: https://tadayosi.github.io/samples-patternfly/
+See: https://tadayosi.github.io/samples-angularjs/
