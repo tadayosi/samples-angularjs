@@ -2,7 +2,25 @@
   "name": "samples-angularjs",
   "version": "1.0.0",
   "description": "AngularJS samples",
+  "author": "Tadayoshi Sato",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/tadayosi/samples-angularjs#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tadayosi/samples-angularjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tadayosi/samples-angularjs/issues"
+  },
+  "keywords": [
+    "angularjs",
+    "patternfly"
+  ],
   "main": "index.html",
+  "scripts": {
+    "build": "webpack",
+    "lint": "tslint app/**/*.ts"
+  },
   "dependencies": {
     "@types/angular": "^1.6.25",
     "@uirouter/angularjs": "^1.0.5",
@@ -25,22 +43,5 @@
     "typescript": "^2.4.1",
     "webpack": "^3.0.0",
     "yargs": "^8.0.2"
-  },
-  "scripts": {
-    "build": "webpack",
-    "lint": "tslint app/**/*.ts"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tadayosi/samples-angularjs.git"
-  },
-  "keywords": [
-    "patternfly"
-  ],
-  "author": "Tadayoshi Sato",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/tadayosi/samples-angularjs/issues"
-  },
-  "homepage": "https://github.com/tadayosi/samples-angularjs#readme"
+  }
 }
