@@ -1,14 +1,15 @@
 const path = require('path');
 
 module.exports = {
-  entry: './app/main.js',
+  entry: './app/app.ts',
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [{
-      test: /.jsx?$/,
+      test: /.tsx?$/,
+      loader: 'ts-loader',
       include: [
         path.resolve(__dirname, 'app')
       ],
@@ -18,12 +19,12 @@ module.exports = {
       ],
       loader: 'babel-loader',
       query: {
-        presets: ['env']
+        presets: ['es2015', 'react']
       }
     }]
   },
   resolve: {
-    extensions: ['.json', '.js', '.jsx', '.css']
+    extensions: ['.json', '.tsx', '.ts', '.js', '.jsx', '.css']
   },
-  devtool: 'source-map'
+  devtool: 'inline-source-map'
 };
