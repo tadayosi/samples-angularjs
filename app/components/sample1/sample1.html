@@ -3,6 +3,7 @@
     <h1>Sample 1</h1>
   </div>
   <div class="col-sm-12 col-md-12">
+    <hr/>
     <h2>Hello!</h2>
     <form class="form-horizontal">
       <div class="form-group">
@@ -19,12 +20,15 @@
 </div>
 <div class="row">
   <div class="col-sm-12 col-md-12">
+    <hr/>
     <h2>Button</h2>
     <form class="form-horizontal">
       <div class="form-group">
         <label class="col-md-2 control-label">Click this!</label>
         <div class="col-md-10">
-          <button type="button" class="btn btn-primary" ng-click="$ctrl.onClick()">Button</button>
+          <button type="button" class="btn btn-primary" ng-click="$ctrl.onClick()" ng-disabled="$ctrl.disableButton">
+            Button
+          </button>
         </div>
       </div>
     </form>

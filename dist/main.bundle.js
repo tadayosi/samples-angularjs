@@ -44964,7 +44964,6 @@ exports.Sample1Module = angular
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var sample1_controller_1 = __webpack_require__(93);
-//import template from 'html-loader!./sample1.html';
 exports.Sample1Component = {
     controller: sample1_controller_1.Sample1Controller,
     templateUrl: 'app/components/sample1/sample1.html',
@@ -44980,17 +44979,23 @@ exports.Sample1Component = {
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var Sample1Controller = (function () {
-    function Sample1Controller(sample1Service) {
+    function Sample1Controller(sample1Service, $timeout) {
         this.sample1Service = sample1Service;
-        console.log(sample1Service);
+        this.$timeout = $timeout;
+        console.debug("Loading", this, "with", sample1Service);
     }
     Sample1Controller.prototype.$onInit = function () {
         this.count = 0;
+        this.disableButton = false;
     };
     Sample1Controller.prototype.onClick = function () {
+        var _this = this;
+        console.debug("Button clicked");
+        this.disableButton = true;
         this.count++;
+        this.$timeout(function () { _this.disableButton = false; }, 3000);
     };
-    Sample1Controller.$inject = ['Sample1Service'];
+    Sample1Controller.$inject = ['Sample1Service', '$timeout'];
     return Sample1Controller;
 }());
 exports.Sample1Controller = Sample1Controller;
