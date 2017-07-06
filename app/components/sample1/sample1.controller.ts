@@ -3,14 +3,18 @@ import uiRouter from '@uirouter/angularjs';
 import { Sample1Service } from './sample1.service';
 
 export class Sample1Controller {
-  static $inject: string[] = ['$scope', 'Sample1Service'];
+  static $inject: string[] = ['Sample1Service'];
   count: number;
 
-  constructor(private $scope: any, private sample1Service: Sample1Service) {
+  constructor(private sample1Service: Sample1Service) {
+    console.log(sample1Service);
   }
 
   $onInit() {
     this.count = 0;
-    this.$scope.count = 0;
+  }
+
+  onClick() {
+    this.count++;
   }
 }

@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './app/app.ts',
@@ -7,23 +8,29 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   module: {
-    rules: [{
-      test: /.tsx?$/,
-      loader: 'ts-loader',
-      include: [
-        path.resolve(__dirname, 'app')
-      ],
-      exclude: [
-        path.resolve(__dirname, 'node_modules'),
-        path.resolve(__dirname, 'bower_components')
-      ],
-      query: {
-        presets: ['es2015', 'react']
+    rules: [
+      {
+        test: /.tsx?$/,
+        loader: 'ts-loader',
+        include: [
+          path.resolve(__dirname, 'app')
+        ],
+        exclude: [
+          path.resolve(__dirname, 'node_modules'),
+          path.resolve(__dirname, 'bower_components')
+        ],
+        query: {
+          presets: ['es2015', 'react']
+        }
+      },
+      {
+        test: /.html$/,
+        loader: 'html-loader'
       }
-    }]
+    ]
   },
   resolve: {
     extensions: ['.json', '.tsx', '.ts', '.js', '.jsx', '.css']
   },
-  devtool: 'inline-source-map'
+  devtool: 'source-map'
 };

@@ -7,8 +7,6 @@
 
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly-additions.min.css">
-
-  <script src="node_modules/patternfly-bootstrap-treeview/dist/bootstrap-treeview.js"></script>
 </head>
 
 <body>
@@ -46,46 +44,13 @@
   </div>
 
   <div class="container-fluid container-pf-nav-pf-vertical">
-    <div class="row">
-      <div class="col-sm-12 col-md-12">
-        <h1>Sample 1</h1>
-      </div>
-      <div class="col-sm-12 col-md-12">
-        <h2>Hello!</h2>
-        <form class="form-horizontal">
-          <div class="form-group">
-            <label class="col-md-2 control-label" for="textInput">Name:</label>
-            <div class="col-md-6">
-              <input type="text" id="textInput" class="form-control" ng-model="name" placeholder="Enter a name here">
-            </div>
-          </div>
-        </form>
-        <div class="alert alert-success">
-          <span class="pficon pficon-info"></span> Hello {{name}}!
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12 col-md-12">
-        <h2>Button</h2>
-        <form class="form-horizontal">
-          <div class="form-group">
-            <label class="col-md-2 control-label">Click this!</label>
-            <div class="col-md-10">
-              <button type="button" class="btn btn-primary">Button</button>
-            </div>
-          </div>
-        </form>
-        <div class="alert alert-success">
-          <span class="pficon pficon-info"></span> Click count: {{count}}
-        </div>
-      </div>
-    </div>
+    <sample1></sample1>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly.min.css"></script>
+  <script src="node_modules/patternfly-bootstrap-treeview/dist/bootstrap-treeview.js"></script>
   <script src="dist/main.bundle.js"></script>
 </body>
 
