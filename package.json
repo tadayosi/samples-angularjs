@@ -19,6 +19,7 @@
   "main": "index.html",
   "scripts": {
     "build": "webpack",
+    "start": "webpack && gulp",
     "lint": "tslint app/**/*.ts"
   },
   "dependencies": {

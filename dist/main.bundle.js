@@ -8827,11 +8827,11 @@ var components_module_1 = __webpack_require__(90);
 var common_module_1 = __webpack_require__(95);
 var app = angular
     .module('app', [
-    components_module_1.ComponentsModule,
+    components_module_1.componentsModule,
     common_module_1.CommonModule,
     angularjs_1.default
 ])
-    .component('app', app_component_1.AppComponent)
+    .component('app', app_component_1.appComponent)
     .name;
 exports.default = app;
 
@@ -44917,7 +44917,9 @@ angular_1.ng.module('ui.router.state').provider('$uiViewScroll', $ViewScrollProv
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppComponent = {};
+exports.appComponent = {
+    templateUrl: 'app/app.html'
+};
 
 
 /***/ }),
@@ -44929,9 +44931,9 @@ exports.AppComponent = {};
 Object.defineProperty(exports, "__esModule", { value: true });
 var angular = __webpack_require__(8);
 var sample1_module_1 = __webpack_require__(91);
-exports.ComponentsModule = angular
+exports.componentsModule = angular
     .module('app.components', [
-    sample1_module_1.Sample1Module
+    sample1_module_1.sample1Module
 ])
     .name;
 
@@ -44947,12 +44949,17 @@ var angular = __webpack_require__(8);
 var angularjs_1 = __webpack_require__(31);
 var sample1_component_1 = __webpack_require__(92);
 var sample1_service_1 = __webpack_require__(94);
-exports.Sample1Module = angular
+exports.sample1Module = angular
     .module('sample1', [
     angularjs_1.default
 ])
-    .component('sample1', sample1_component_1.Sample1Component)
-    .service('Sample1Service', sample1_service_1.Sample1Service)
+    .component('sample1', sample1_component_1.sample1Component)
+    .service('sample1Service', sample1_service_1.Sample1Service)
+    .config(function ($stateProvider, $urlRouterProvider) {
+    $stateProvider
+        .state('sample1', { url: '/sample1', component: 'sample1' });
+    $urlRouterProvider.otherwise('/');
+})
     .name;
 
 
@@ -44964,10 +44971,9 @@ exports.Sample1Module = angular
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var sample1_controller_1 = __webpack_require__(93);
-exports.Sample1Component = {
+exports.sample1Component = {
     controller: sample1_controller_1.Sample1Controller,
-    templateUrl: 'app/components/sample1/sample1.html',
-    bindings: {}
+    templateUrl: 'app/components/sample1/sample1.html'
 };
 
 
@@ -44980,22 +44986,22 @@ exports.Sample1Component = {
 Object.defineProperty(exports, "__esModule", { value: true });
 var Sample1Controller = (function () {
     function Sample1Controller(sample1Service, $timeout) {
+        'ngInject';
         this.sample1Service = sample1Service;
         this.$timeout = $timeout;
-        console.debug("Loading", this, "with", sample1Service);
     }
     Sample1Controller.prototype.$onInit = function () {
+        console.debug("*****", "Loading", this, "with", this.sample1Service, "*****");
         this.count = 0;
         this.disableButton = false;
     };
     Sample1Controller.prototype.onClick = function () {
         var _this = this;
-        console.debug("Button clicked");
+        console.debug("*****", "Button clicked", "*****");
         this.disableButton = true;
         this.count++;
-        this.$timeout(function () { _this.disableButton = false; }, 3000);
+        this.$timeout(function () { return _this.disableButton = false; }, 1000);
     };
-    Sample1Controller.$inject = ['Sample1Service', '$timeout'];
     return Sample1Controller;
 }());
 exports.Sample1Controller = Sample1Controller;

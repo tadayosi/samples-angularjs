@@ -1,16 +1,16 @@
 import * as angular from 'angular';
 import uiRouter from '@uirouter/angularjs';
-import { AppComponent } from './app.component';
-import { ComponentsModule } from './components/components.module';
+import { appComponent } from './app.component';
+import { componentsModule } from './components/components.module';
 import { CommonModule } from './common/common.module';
 
 const app = angular
   .module('app', [
-    ComponentsModule,
+    componentsModule,
     CommonModule,
     uiRouter
   ])
-  .component('app', AppComponent)
+  .component('app', appComponent)
   .name;
 
 export default app;
