@@ -1,0 +1,81 @@
+<div class="row sample2">
+  <div class="col-sm-3 col-md-3 sidebar-pf sidebar-pf-left" resizable r-directions="['right']">
+    <div id="sample2-tree" class="treeview-pf-hover treeview-pf-select"></div>
+  </div>
+  <div class="col-sm-9 col-md-9 sample2-content">
+    <h1>Sample 2: Sidebar tree view</h1>
+
+    <div class="alert alert-info" ng-show="!$ctrl.success && !$ctrl.warning && !$ctrl.danger">
+      <span class="pficon pficon-info"></span>
+      Selected item:
+      <b>{{ $ctrl.title }}</b>
+    </div>
+    <div class="toast-pf alert alert-success alert-dismissable" ng-show="$ctrl.success">
+      <span class="pficon pficon-ok"></span>
+      Button {{$ctrl.name}} clicked!
+    </div>
+    <div class="toast-pf alert alert-warning alert-dismissable" ng-show="$ctrl.warning">
+      <span class="pficon pficon-warning-triangle-o"></span>
+      Button {{$ctrl.name}} clicked!
+    </div>
+    <div class="toast-pf alert alert-danger alert-dismissable" ng-show="$ctrl.danger">
+      <span class="pficon pficon-error-circle-o"></span>
+      Button {{$ctrl.name}} clicked!
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="control-group">
+          <button type="submit" class="btn btn-primary" ng-click="$ctrl.doSuccess('A')">
+            ===== Button A =====
+          </button>
+          <label>Click button A !!!</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="control-group">
+          <button type="submit" class="btn btn-warning" ng-click="$ctrl.doWarning('B')">
+            ===== Button B =====
+          </button>
+          <label>Click button B !!!</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="control-group">
+          <button type="submit" class="btn btn-danger" ng-click="$ctrl.doDanger('C')">
+            ===== Button C =====
+          </button>
+          <label>Click button C !!!</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="control-group">
+          <button type="submit" class="btn btn-primary" ng-click="$ctrl.doSuccess('D')">
+            ===== Button D =====
+          </button>
+          <label>Click button D !!!</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="control-group">
+          <button type="submit" class="btn btn-warning" ng-click="$ctrl.doWarning('E')">
+            ===== Button E =====
+          </button>
+          <label>Click button E !!!</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="control-group">
+          <button type="submit" class="btn btn-danger" ng-click="$ctrl.doDanger('F')">
+            ===== Button F =====
+          </button>
+          <label>Click button F !!!</label>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

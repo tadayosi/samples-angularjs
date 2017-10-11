@@ -13,13 +13,13 @@ export class Sample1Controller {
   }
 
   $onInit(): void {
-    console.debug("*****", "Loading", this, "with", this.sample1Service, "*****");
+    console.debug("Loading", this, "with", this.sample1Service);
     this.count = 0;
     this.disableButton = false;
   }
 
   onClick(): void {
-    console.debug("*****", "Button clicked", "*****")
+    console.debug("Button clicked")
     this.disableButton = true;
     this.count++;
     this.$timeout(() => this.disableButton = false, 1000);

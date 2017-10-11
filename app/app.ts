@@ -3,12 +3,14 @@ import uiRouter from '@uirouter/angularjs';
 import { appComponent } from './app.component';
 import { componentsModule } from './components/components.module';
 import { CommonModule } from './common/common.module';
+import './app.less';
 
 const app = angular
   .module('app', [
+    uiRouter,
+    'patternfly',
     componentsModule,
-    CommonModule,
-    uiRouter
+    CommonModule
   ])
   .component('app', appComponent)
   .name;

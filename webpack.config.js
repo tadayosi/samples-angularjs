@@ -26,11 +26,19 @@ module.exports = {
       {
         test: /.html$/,
         loader: 'html-loader'
+      },
+      {
+        test: /\.less$/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'less-loader' }
+        ]
       }
     ]
   },
   resolve: {
-    extensions: ['.json', '.tsx', '.ts', '.js', '.jsx', '.css']
+    extensions: ['.json', '.tsx', '.ts', '.js', '.jsx', '.css', '.less']
   },
   devtool: 'source-map'
 };
